@@ -1,4 +1,4 @@
-# Evaluacion m2 t3
+# Evaluacion Modulo 3 Laboratorio 2
 
 ## 📖 Descripción
 En esta fase del proyecto, el enfoque estará en la implementación del preprocesador SASS
