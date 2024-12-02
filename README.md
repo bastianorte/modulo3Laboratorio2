@@ -86,6 +86,7 @@ calcularConsulta.js
     };
 ```
 
+
 <picture>
   <img src="https://github.com/bastianorte/modulo3Laboratorio2/blob/main/assets/images/lab2004.png">
 </picture>
@@ -99,6 +100,7 @@ tiempoEspera.js
     return totalTiempo / pacientes.length;
   };
 ```
+
 
 <picture>
   <img src="https://github.com/bastianorte/modulo3Laboratorio2/blob/main/assets/images/lab2005.png">
@@ -115,6 +117,7 @@ funcionRecursiva.js
     };
 ```
 
+
 <picture>
   <img src="https://github.com/bastianorte/modulo3Laboratorio2/blob/main/assets/images/lab2001.png">
 </picture>
@@ -129,6 +132,7 @@ formulario.addEventListener("submit", function(evento) {
     alert("¡Formulario enviado con éxito!");
 });
 ```
+
 
 <picture>
   <img src="https://github.com/bastianorte/modulo3Laboratorio2/blob/main/assets/images/lab2002.png">
@@ -149,6 +153,7 @@ document.addEventListener("nuevoPaciente", () => {
   }, 5000);
 });
 ```
+
 
 <picture>
   <img src="https://github.com/bastianorte/modulo3Laboratorio2/blob/main/assets/images/lab2003.png">
