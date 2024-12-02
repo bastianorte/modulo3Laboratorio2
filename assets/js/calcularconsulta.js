@@ -7,7 +7,7 @@
     };
 
     // Currying para calcular el valor de diferentes consultas
-    const agregarProducto = (medicos) => (cantidad) => {
+    const agregarConsulta = (medicos) => (cantidad) => {
       const precio = medicosDisponibles[medicos];
       return cantidad * precio;
     };
@@ -45,7 +45,7 @@
       const cantidad = 1;
 
       if (cantidad > 0) {
-        const precioTotal = agregarProducto(productoSeleccionado)(cantidad);
+        const precioTotal = agregarConsulta(productoSeleccionado)(cantidad);
         carrito.push({ 
           nombre: productoSeleccionado.charAt(0).toUpperCase() + productoSeleccionado.slice(1), // Capitalizar el nombre
           cantidad,

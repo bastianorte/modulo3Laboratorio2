@@ -9,7 +9,7 @@ document.addEventListener("nuevoPaciente", () => {
   alerta.style.display = "block";
   setTimeout(() => {
     alerta.style.display = "none"; 
-  }, 5000);
+  }, 10000);
 });
 
 // Obtener el botón y añadirle un listener para disparar el evento cuando se haga clic
