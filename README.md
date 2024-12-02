@@ -70,10 +70,10 @@ eventos, asincronía, y estructuras basadas en clases para modelar la informaci�
 ├── readme.md                  
 ```
 
-##  Objetos JSON
+##  Descripción de funciones
 
 <picture>
-  <img src="https://github.com/bastianorte/Modulo3Laboratorio1/blob/main/assets/images/cap1.png">
+  <img src="https://github.com/bastianorte/modulo3Laboratorio2/blob/main/assets/images/lab2006.png">
 </picture>
 
 Función que use currying en página de equipos para calcular el costo total de los servicios de un paciente en función del número de consultas realizadas
@@ -87,7 +87,7 @@ calcularConsulta.js
 ```
 
 <picture>
-  <img src="https://github.com/bastianorte/Modulo3Laboratorio1/blob/main/assets/images/cap1.png">
+  <img src="https://github.com/bastianorte/modulo3Laboratorio2/blob/main/assets/images/lab2004.png">
 </picture>
 
 Función flecha en página de equipos para simplificar la sintaxis en una función que calcule el tiempo promedio de espera de los pacientes.
@@ -101,7 +101,7 @@ tiempoEspera.js
 ```
 
 <picture>
-  <img src="https://github.com/bastianorte/Modulo3Laboratorio1/blob/main/assets/images/cap1.png">
+  <img src="https://github.com/bastianorte/modulo3Laboratorio2/blob/main/assets/images/lab2005.png">
 </picture>
 
 Recursión en página de equipos para calcular de forma recursiva el total de horas de consulta de un doctor a lo largo de la semana.
@@ -116,7 +116,7 @@ funcionRecursiva.js
 ```
 
 <picture>
-  <img src="https://github.com/bastianorte/Modulo3Laboratorio1/blob/main/assets/images/cap1.png">
+  <img src="https://github.com/bastianorte/modulo3Laboratorio2/blob/main/assets/images/lab2001.png">
 </picture>
 
 Listener en página de contacto para capturar el envío del formulario y muestra un mensaje de confirmación.
@@ -131,7 +131,7 @@ formulario.addEventListener("submit", function(evento) {
 ```
 
 <picture>
-  <img src="https://github.com/bastianorte/Modulo3Laboratorio1/blob/main/assets/images/cap1.png">
+  <img src="https://github.com/bastianorte/modulo3Laboratorio2/blob/main/assets/images/lab2002.png">
 </picture>
 
 Dispara un evento en toda la página personalizado que simule la llegada de un nuevo paciente, mostrando una notificación en la página.
@@ -151,7 +151,7 @@ document.addEventListener("nuevoPaciente", () => {
 ```
 
 <picture>
-  <img src="https://github.com/bastianorte/Modulo3Laboratorio1/blob/main/assets/images/cap1.png">
+  <img src="https://github.com/bastianorte/modulo3Laboratorio2/blob/main/assets/images/lab2003.png">
 </picture>
 
 Implementación de una función async/await con promise
