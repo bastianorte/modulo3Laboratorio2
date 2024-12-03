@@ -72,6 +72,8 @@ eventos, asincronía, y estructuras basadas en clases para modelar la informaci�
 
 ##  Descripción de funciones
 
+### Currying
+
 <picture>
   <img src="https://github.com/bastianorte/modulo3Laboratorio2/blob/main/assets/images/lab2006.png">
 </picture>
@@ -86,6 +88,7 @@ calcularConsulta.js
     };
 ```
 
+### Función flecha
 
 <picture>
   <img src="https://github.com/bastianorte/modulo3Laboratorio2/blob/main/assets/images/lab2004.png">
@@ -101,6 +104,7 @@ tiempoEspera.js
   };
 ```
 
+### Recursión
 
 <picture>
   <img src="https://github.com/bastianorte/modulo3Laboratorio2/blob/main/assets/images/lab2005.png">
@@ -117,6 +121,52 @@ funcionRecursiva.js
     };
 ```
 
+### Composición de funciones
+
+<picture>
+  <img src="https://github.com/bastianorte/modulo3Laboratorio2/blob/main/assets/images/lab2007.png">
+</picture>
+
+Composición de funciones en página de equipos para aplicar descuentos a los costos de consultas en base a la cantidad de consultas realizadas.
+
+```
+calcularConsulta.js
+
+// Función para actualizar el total
+function actualizarTotal() {
+  totalGlobal = calcularTotal(carrito); // Guardamos el total en la variable global
+  document.getElementById("total").textContent = `Total: $${totalGlobal}`;
+}
+
+// Función para obtener el valor total fuera de la función de actualización
+function obtenerTotal() {
+  console.log(totalGlobal); // Accedemos a la variable global para mostrar el total
+  return totalGlobal; // Retornamos el total global
+}
+
+//Integra composición de funciones para aplicar descuentos a los costos de consultas
+    let costoConDescuento;
+    let descuento = 0
+    // Función para aplicar el descuento
+    function aplicarDescuento() {
+      if (carrito.length < 1) {
+        descuento = 0;  // Sin descuento si el carrito está vacío
+      } else if (carrito.length >= 1 && carrito.length < 3) {
+        descuento = 0.1;  // 10% de descuento si hay entre 1 y 2 productos
+      } else if (carrito.length >= 3 && carrito.length < 5) {
+        descuento = 0.2;  // 20% de descuento si hay entre 3 y 4 productos
+      } else {
+        descuento = 0.3;  // 30% de descuento si hay 5 o más productos
+      }
+
+    // Calcular el costo con descuento
+    costoConDescuento = obtenerTotal() * (1 - descuento);
+
+    document.getElementById('resultado').innerText = `El costo final después de aplicar el descuento es: $${costoConDescuento.toFixed(2)}`;
+    }
+```
+
+### Listener
 
 <picture>
   <img src="https://github.com/bastianorte/modulo3Laboratorio2/blob/main/assets/images/lab2001.png">
@@ -133,6 +183,7 @@ formulario.addEventListener("submit", function(evento) {
 });
 ```
 
+### Evento personalizado
 
 <picture>
   <img src="https://github.com/bastianorte/modulo3Laboratorio2/blob/main/assets/images/lab2002.png">
@@ -154,6 +205,7 @@ document.addEventListener("nuevoPaciente", () => {
 });
 ```
 
+### Función async/await
 
 <picture>
   <img src="https://github.com/bastianorte/modulo3Laboratorio2/blob/main/assets/images/lab2003.png">
@@ -185,6 +237,7 @@ async function obtenerMedicos() {
 }
 ```
 
+### Constructor
 
 Implementación una clase Doctor con las propiedades nombre, especialidad, y años de experiencia con getter y setter
 

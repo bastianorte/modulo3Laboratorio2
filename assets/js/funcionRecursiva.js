@@ -1,10 +1,10 @@
-    // Función recursiva para calcular el total de horas de consulta en una semana
+    // Función recursiva 
     const calcularHorasTotales = (horas, index = 0) => {
         if (index === horas.length) return 0; // Caso base: cuando se han recorrido todos los días
         return horas[index] + calcularHorasTotales(horas, index + 1); // Recursión sumando las horas
       };
   
-      // Función para mostrar el modal y agregar un nuevo médico
+      // Función para mostrar el modal
       function agregarMedico() {
         // Mostrar el modal
         const myModal = new bootstrap.Modal(document.getElementById('modalMedico'));
