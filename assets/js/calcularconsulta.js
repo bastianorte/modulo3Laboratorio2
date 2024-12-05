@@ -9,19 +9,19 @@ let totalGlobal = 0; // Variable global para almacenar el total
       psicologia: 50
     };
 
-    // Currying para calcular el valor de diferentes consultas
+    // Currying 
     const agregarConsulta = (medicos) => (cantidad) => {
       const precio = medicosDisponibles[medicos];
       return cantidad * precio;
     };
     
 
-// Función para calcular el total del carrito
+// Total del carrito
 const calcularTotal = (medicos) => {
   return medicos.reduce((total, medicos) => total + medicos.precioTotal, 0);
 };
 
-// Función para mostrar el carrito
+// Mostrar el carrito
 function mostrarCarrito() {
   const listaCarrito = document.getElementById("lista-carrito");
   listaCarrito.innerHTML = "";
@@ -37,7 +37,7 @@ function mostrarCarrito() {
   });
 }
 
-// Función para agregar un producto al carrito
+// Agregar nueva cita
 function agregarAlCarrito() {
   const productoSeleccionado = document.getElementById("medicos").value;
   const cantidad = 1;
@@ -50,25 +50,24 @@ function agregarAlCarrito() {
       precioTotal 
     });
     mostrarCarrito();
-    actualizarTotal(); // Actualizamos el total después de agregar
+    actualizarTotal();
   }
 }
 
-// Función para actualizar el total
 function actualizarTotal() {
-  totalGlobal = calcularTotal(carrito); // Guardamos el total en la variable global
+  totalGlobal = calcularTotal(carrito); 
   document.getElementById("total").textContent = `Total: $${totalGlobal}`;
 }
 
-// Función para obtener el valor total fuera de la función de actualización
 function obtenerTotal() {
-  console.log(totalGlobal); // Accedemos a la variable global para mostrar el total
-  return totalGlobal; // Retornamos el total global
+  console.log(totalGlobal); 
+  return totalGlobal; 
 }
 
-//Integra composición de funciones para aplicar descuentos a los costos de consultas
+// Integra composición de funciones para aplicar descuentos a los costos de consultas
     let costoConDescuento;
     let descuento = 0
+
     // Función para aplicar el descuento
     function aplicarDescuento() {
       if (carrito.length < 1) {
@@ -81,7 +80,7 @@ function obtenerTotal() {
         descuento = 0.3;  // 30% de descuento si hay 5 o más productos
       }
 
-    // Calcular el costo con descuento
+    // Calcular el costo 
     costoConDescuento = obtenerTotal() * (1 - descuento);
 
     document.getElementById('resultado').innerText = `El costo final después de aplicar el descuento es: $${costoConDescuento.toFixed(2)}`;

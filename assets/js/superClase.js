@@ -7,12 +7,12 @@ class Doctor {
       this._experiencia = experiencia; 
     }
   
-    // Getter para la propiedad 'experiencia'
+    // Getter 
     get experiencia() {
       return this._experiencia;
     }
   
-    // Setter para la propiedad 'experiencia'
+    // Setter 
     set experiencia(valor) {
       if (valor < 0) {
         console.log("Los años de experiencia no pueden ser negativos.");
@@ -21,12 +21,11 @@ class Doctor {
       }
     }
   
-    // Método para mostrar información del doctor
+
     mostrarInfo() {
       console.log(`Doctor: ${this.nombre}, ${this.especialidad} con ${this._experiencia} años de experiencia`);
     }
-  
-    // Método para calcular el total de pacientes atendidos (se asume que es un valor ficticio)
+
     calcularPacientesAtendidos() {
       return this._experiencia * 10; 
     }
@@ -42,19 +41,18 @@ class Doctor {
 
   }
   
-  // Ejemplo de uso de las clases
   
-  // Crear un objeto de la clase Doctor
+  // Ejemplo doctor
   const doctor1 = new Doctor("Dr. Pérez", "Cardiología", 10);
   doctor1.mostrarInfo();
   console.log(`Pacientes atendidos: ${doctor1.calcularPacientesAtendidos()}`);
   
-  // Crear un objeto de la clase Cirujano
+  // Ejemplo Cirujano
   const cirujano1 = new Cirujano("Dr. García", 15);
   cirujano1.mostrarInfo();
   console.log(`Operaciones realizadas: ${cirujano1.calcularPacientesAtendidos()}`);
   
-  // Cambiar los años de experiencia usando el setter
-  doctor1.experiencia = 12; // Actualiza los años de experiencia
+
+  doctor1.experiencia = 12; 
   doctor1.mostrarInfo();
   

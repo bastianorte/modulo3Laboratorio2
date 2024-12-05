@@ -1,4 +1,3 @@
-// Lista de pacientes por defecto
 let pacientes = [
     { nombre: "Juan", tiempoEspera: 15 },
     { nombre: "Ana", tiempoEspera: 25 },
@@ -11,16 +10,14 @@ let pacientes = [
     return totalTiempo / pacientes.length;
   };
   
-  // Función para mostrar el tiempo promedio en la página
   const mostrarPromedio = () => {
     const promedio = calcularTiempoPromedio();
     document.getElementById('promedio').textContent = promedio.toFixed(2); // Muestra el promedio con 2 decimales
   };
   
-  // Función para mostrar la lista de pacientes en la página
   const mostrarListaPacientes = () => {
     const listaPacientes = document.getElementById('listaPacientes');
-    listaPacientes.innerHTML = ''; // Limpiar la lista actual
+    listaPacientes.innerHTML = ''; 
   
     pacientes.forEach((paciente) => {
       const nuevoPaciente = document.createElement('div');
@@ -30,9 +27,9 @@ let pacientes = [
     });
   };
   
-  // Manejar el envío del formulario para agregar un paciente
+
   document.getElementById('formulario').addEventListener('submit', (e) => {
-    e.preventDefault(); // Evita que el formulario se recargue al enviarlo
+    e.preventDefault(); 
     
     const nombrePaciente = document.getElementById('nombrePaciente').value;
     const tiempoEspera = parseInt(document.getElementById('tiempoEspera').value);
@@ -42,21 +39,18 @@ let pacientes = [
       return;
     }
     
-    // Agregar el nuevo paciente al arreglo de pacientes
     pacientes.push({ nombre: nombrePaciente, tiempoEspera });
   
-    // Mostrar el tiempo promedio actualizado
     mostrarPromedio();
-    
-    // Mostrar la lista actualizada
+
     mostrarListaPacientes();
     
-    // Limpiar los campos de entrada
+
     document.getElementById('nombrePaciente').value = '';
     document.getElementById('tiempoEspera').value = '';
   });
   
-  // Mostrar la lista de pacientes y el promedio al cargar la página
+
   window.onload = () => {
     mostrarListaPacientes();
     mostrarPromedio();

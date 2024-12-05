@@ -1,34 +1,31 @@
 const medicosTableBody = document.getElementById('medicosTable')
 
-// Variable global para los médicos
+
 let medicos = [];
-let sortAscendente = true; // Control de si el orden es ascendente (true) o descendente (false)
+let sortAscendente = true; 
 let ordenAscendenteExperiencia = true;
 
-// Función para obtener los datos de los médicos de forma asíncrona (simula fetch desde un archivo JSON)
+// Async
 async function obtenerMedicos() {
   try {
     const medicosResponse = await fetch('assets/js/medicos.json');  // Obtiene el primer JSON (médicos iniciales)
 
-    // Usamos Promise.reject() para manejar el error si la respuesta no es exitosa
+
     if (!medicosResponse.ok) {
-        return Promise.reject('Error al obtener los datos.');  // Rechaza la promesa si no es exitosa
+        return Promise.reject('Error al obtener los datos.');  
       }
 
-    const medicosData = await medicosResponse.json();  // Datos iniciales
+    const medicosData = await medicosResponse.json();  
 
-    // Fusionar los dos JSON
     medicos = medicosData;
 
-
-    // Renderizar los médicos
     renderizarMedicos();
   } catch (error) {
     console.error('Error al obtener los médicos:', error);
   }
 }
 
-// Función para renderizar la lista de médicos
+
 function renderizarMedicos() {
     const medicosParaRenderizar = arguments.length > 0 ? arguments[0] : medicos;
   
